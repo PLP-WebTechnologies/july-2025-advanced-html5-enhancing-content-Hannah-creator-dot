@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced HTML5 Content & Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: left;
+    }
+    fieldset {
+      margin: 15px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: auto;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+      background-color: #34495e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced HTML5 Content & Forms</h1>
+    <p>This page demonstrates lists, tables, media embedding, and a fully functional HTML5 form.</p>
+  </header>
+
+  <section>
+    <h2>Favorite Programming Languages (List Example)</h2>
+    <ul>
+      <li>Python</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>C++</li>
+      <li>PHP</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Course Schedule (Table Example)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Course</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Web Development</td>
+          <td>9:00 - 11:00</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Database Systems</td>
+          <td>10:00 - 12:00</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Cybersecurity</td>
+          <td>1:00 - 3:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Media Example</h2>
+    <p>Here is an embedded image and audio sample:</p>
+    <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg/400x200" alt="Sample Image">
+    <br><br>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section>
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1234567890" pattern="[+]{1}[0-9]{10,14}" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required minlength="5">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <label>
+          <input type="checkbox" name="newsletter" value="yes"> Subscribe to Newsletter
+        </label>
+
+        <label>
+          <input type="radio" name="membership" value="basic" required> Basic Membership
+        </label>
+        <label>
+          <input type="radio" name="membership" value="premium"> Premium Membership
+        </label>
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+      </fieldset>
+
+      <input type="submit" value="Submit Form">
+    </form>
+  </section>
+
+</body>
+</html>
